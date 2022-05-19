@@ -2,8 +2,6 @@
 #include <iostream>
 using namespace std;
 
-#define n 20
-
 class node
 {
 public:
