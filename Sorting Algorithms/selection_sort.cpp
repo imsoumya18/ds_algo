@@ -4,6 +4,10 @@
 using namespace std;
 
 // selection sort algorithm
+
+/*Find the minimum element in unsorted array and swap
+it with element at begining*/
+
 void selection_sort(vector<int> &vct)
 {
     for (int i = 0; i < vct.size() - 1; i++)
