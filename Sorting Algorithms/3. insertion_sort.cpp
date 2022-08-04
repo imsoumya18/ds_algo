@@ -10,15 +10,19 @@ to its corect position in sorted array*/
 
 void insertion_sort(vector<int> &vct)
 {
-    for (int i = 1; i < vct.size(); i++)
-        for (int j = 0; j < i; j++)
-            if (vct[i] < vct[j])
-            {
-                int temp = vct[i];
-                for (int k = i; k > j; k--)
-                    vct[k] = vct[k - 1];
-                vct[j] = temp;
-            }
+    for (int i = 1; i < nums.size(); i++)
+    {
+        int temp = nums[i];
+        int j = i - 1;
+
+        while (nums[j] > temp && j >= 0)
+        {
+            nums[j + 1] = nums[j];
+            j--;
+        }
+
+        nums[j + 1] = temp;
+    }
 }
 
 int main()
