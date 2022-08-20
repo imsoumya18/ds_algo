@@ -29,6 +29,21 @@ Node *insertBST(Node *root, int val)
     return root;
 }
 
+// search in BST
+Node *searchBST(Node *root, int k)
+{
+    if (root == NULL)
+        return NULL;
+
+    if (root->data == k)
+        return root;
+
+    if (root->data > k)
+        return searchBST(root->left, k);
+
+    return searchBST(root->right, k);
+}
+
 // inorder traversal (left-node-right)
 void inorder(struct Node *root)
 {
