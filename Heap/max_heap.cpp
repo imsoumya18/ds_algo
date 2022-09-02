@@ -29,7 +29,7 @@ void insert(vector<int> &harr, int p)
     }
 }
 
-// min heap deletion
+// max heap deletion
 void deletion(vector<int> &harr)
 {
     harr[0] = harr[harr.size() - 1];
