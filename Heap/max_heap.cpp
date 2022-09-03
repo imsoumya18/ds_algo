@@ -70,6 +70,13 @@ void heapify(vector<int> &harr, int i)
     }
 }
 
+// build heap
+void buildHeap(vector<int> &harr)
+{
+    for (int i = harr.size() / 2; i > 0; i--)
+        heapify(harr, i);
+}
+
 int main()
 {
 #ifndef ONLINE_JUDGE
