@@ -51,6 +51,25 @@ void deletion(vector<int> &harr)
     }
 }
 
+// heapify
+void heapify(vector<int> &harr, int i)
+{
+    int largest = i;
+    int l = 2 * i, r = 2 * i + 1;
+
+    if (l <= harr.size() && harr[l] > harr[largest])
+        largest = l;
+
+    if (r <= harr.size() && harr[r] > harr[largest])
+        largest = r;
+
+    if (largest != i)
+    {
+        swap(harr[i], harr[largest]);
+        heapify(harr, largest);
+    }
+}
+
 int main()
 {
 #ifndef ONLINE_JUDGE
