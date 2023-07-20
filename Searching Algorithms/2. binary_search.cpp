@@ -4,20 +4,21 @@
 using namespace std;
 
 // binary search algorithm
-int binary_search(vector<int> vct, int n, int first, int last)
+int binarySearch(vector<int> vct, int key)
 {
-    if (first <= last)
+    int lo = 0, hi = vct.size() - 1;
+    int mid = (lo + hi) / 2;
+
+    while (lo <= hi)
     {
-        int mid = first + (last - first) / 2;
+        mid = (lo + hi) / 2;
 
-        if (vct[mid] == n)
+        if (key == vct[mid])
             return mid;
-
-        else if (vct[mid] > n)
-            return binary_search(vct, n, first, mid - 1);
-
+        if (key < vct[mid])
+            hi = mid - 1;
         else
-            return binary_search(vct, n, mid + 1, last);
+            lo = mid + 1;
     }
 
     return -1;
@@ -25,10 +26,12 @@ int binary_search(vector<int> vct, int n, int first, int last)
 
 int main()
 {
-    vector<int> vct{-35, -2, 27, 48, 95};
-    int n = 95;
+    vector<int> vct{3, 7, 9, 11, 17, 39};
 
-    cout << binary_search(vct, n, 0, vct.size() - 1);
+    for (auto i : vct)
+        cout << binarySearch(vct, i) << endl;
+
+    cout << binarySearch(vct, 10) << endl;
 
     return 0;
 }
