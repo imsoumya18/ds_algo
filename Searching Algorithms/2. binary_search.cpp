@@ -11,14 +11,14 @@ int binarySearch(vector<int> vct, int key)
 
     while (lo <= hi)
     {
-        mid = (lo + hi) / 2;
-
         if (key == vct[mid])
             return mid;
         if (key < vct[mid])
             hi = mid - 1;
         else
             lo = mid + 1;
+
+        mid = (lo + hi) / 2;
     }
 
     return -1;
