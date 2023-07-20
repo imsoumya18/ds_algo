@@ -28,9 +28,6 @@ int main()
 {
     vector<int> vct{3, 7, 9, 11, 17, 39};
 
-    for (auto i : vct)
-        cout << binarySearch(vct, i) << endl;
-
     cout << binarySearch(vct, 10) << endl;
 
     return 0;
