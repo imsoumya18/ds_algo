@@ -35,6 +35,15 @@ void insertAtEnd(node *&head, int val)
     temp->next = n;
 }
 
+// insert node at head
+void insertAtHead(ListNode *&head, int val)
+{
+    ListNode *temp = head;
+
+    head = new ListNode(val);
+    head->next = temp;
+}
+
 // print elements of linked list
 void display(node *head)
 {
