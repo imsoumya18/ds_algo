@@ -4,6 +4,7 @@
 using namespace std;
 
 // bubble sort algorithm
+// bubble sort is a STABLE algorithm
 
 /*Repeatedly swap two adjacent elements
 if they are in wrong order*/
