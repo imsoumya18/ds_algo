@@ -4,6 +4,7 @@
 using namespace std;
 
 // selection sort algorithm
+// selection sort is an UNSTABLE sorting algorithm
 
 /*Find the minimum element in unsorted array and swap
 it with element at begining*/
