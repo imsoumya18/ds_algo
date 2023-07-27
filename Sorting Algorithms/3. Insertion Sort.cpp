@@ -4,6 +4,7 @@
 using namespace std;
 
 // insertion sort algorithm
+// insertion sort is a STABLE algorithm
 
 /*insert an element from unsorted array
 to its corect position in sorted array*/
