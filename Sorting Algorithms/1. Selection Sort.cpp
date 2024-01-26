@@ -11,8 +11,10 @@ it with element at begining*/
 
 void selection_sort(vector<int> &vct)
 {
-    for (int i = 0; i < vct.size() - 1; i++)
-        for (int j = i + 1; j < vct.size(); j++)
+    int n = vct.size();
+
+    for (int i = 0; i < n - 1; i++)
+        for (int j = i + 1; j < n; j++)
             if (vct[j] < vct[i])
                 swap(vct[i], vct[j]);
 }
