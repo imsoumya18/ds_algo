@@ -9,7 +9,7 @@ Quick revision of Data Structures & Algorithms
     - [Bubble Sort](https://github.com/imsoumya18/ds_algo/blob/main/Sorting%20Algorithms/2.%20Bubble%20Sort.cpp)
     - [Insertion Sort](https://github.com/imsoumya18/ds_algo/blob/main/Sorting%20Algorithms/3.%20Insertion%20Sort.cpp)
     - [Merge Sort](https://github.com/imsoumya18/ds_algo/blob/main/Sorting%20Algorithms/4.%20Merge%20Sort.cpp)
-    - [Quick SOrt](https://github.com/imsoumya18/ds_algo/blob/main/Sorting%20Algorithms/5.%20Quick%20Sort.cpp)
+    - [Quick Sort](https://github.com/imsoumya18/ds_algo/blob/main/Sorting%20Algorithms/5.%20Quick%20Sort.cpp)
 3. [Linked List](https://github.com/imsoumya18/ds_algo/tree/main/Linked%20List)
     - [Linked List](https://github.com/imsoumya18/ds_algo/blob/main/Linked%20List/1.%20linked_list.cpp)
 4. [Stack](https://github.com/imsoumya18/ds_algo/tree/main/Stack)
