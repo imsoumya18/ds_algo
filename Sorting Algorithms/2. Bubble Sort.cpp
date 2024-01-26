@@ -11,8 +11,10 @@ if they are in wrong order*/
 
 void bubble_sort(vector<int> &vct)
 {
-    for (int i = 0; i < vct.size() - 1; i++)
-        for (int j = 0; j < vct.size() - i - 1; j++)
+    int n = vct.size();
+
+    for (int i = 0; i < n - 1; i++)
+        for (int j = 0; j < n - i - 1; j++)
             if (vct[j + 1] < vct[j])
                 swap(vct[j], vct[j + 1]);
 }
