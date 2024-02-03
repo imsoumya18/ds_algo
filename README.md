@@ -11,7 +11,7 @@ Quick revision of Data Structures & Algorithms
     - [x] [Merge Sort](https://github.com/imsoumya18/ds_algo/blob/main/Sorting%20Algorithms/4.%20Merge%20Sort.cpp)
     - [x] [Quick Sort](https://github.com/imsoumya18/ds_algo/blob/main/Sorting%20Algorithms/5.%20Quick%20Sort.cpp)
 3. [Linked List](https://github.com/imsoumya18/ds_algo/tree/main/Linked%20List)
-    - [ ] [Linked List](https://github.com/imsoumya18/ds_algo/blob/main/Linked%20List/1.%20linked_list.cpp)
+    - [x] [Linked List](https://github.com/imsoumya18/ds_algo/blob/main/Linked%20List/1.%20linked_list.cpp)
 4. [Stack](https://github.com/imsoumya18/ds_algo/tree/main/Stack)
     - [ ] [Stack using Array](https://github.com/imsoumya18/ds_algo/blob/main/Stack/stack_using_array.cpp)
     - [ ] [Stack using Linked List](https://github.com/imsoumya18/ds_algo/blob/main/Stack/stack_using_linkedlist.cpp)
