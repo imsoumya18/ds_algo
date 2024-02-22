@@ -31,25 +31,26 @@ vector<int> bfs_traversal(int v, vector<int> adj[])
 }
 
 // DFS Recursive Function
-void dfs(int node, vector<int> &vis, vector<int> adj[], vector<int> &dfs_store)
+void dfs(vector<int> &dfs_store, vector<int> &vis, vector<int> adj[], int node)
 {
     dfs_store.push_back(node);
     vis[node] = 1;
 
     for (auto it : adj[node])
-        if (!vis[it])
-            dfs(it, vis, adj, dfs_store);
+        if (vis[it] == 0)
+            dfs(dfs_store, vis, adj, it);
 }
 
 // DFS Traversal
 vector<int> dfs_traversal(int v, vector<int> adj[])
 {
+    // Code here
     vector<int> dfs_store;
-    vector<int> vis(v + 1, 0);
+    vector<int> vis(v, 0);
 
-    for (int i = 1; i <= v; i++)
-        if (!vis[i])
-            dfs(i, vis, adj, dfs_store);
+    for (int i = 0; i < v; i++)
+        if (vis[i] == 0)
+            dfs(dfs_store, vis, adj, i);
 
     return dfs_store;
 }
