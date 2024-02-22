@@ -30,5 +30,6 @@ Quick revision of Data Structures & Algorithms
 8. [Heap](https://github.com/imsoumya18/ds_algo/tree/main/Heap)
     - [ ] [Max Heap](https://github.com/imsoumya18/ds_algo/blob/main/Heap/max_heap.cpp)
 9. [Graph Theory](https://github.com/imsoumya18/ds_algo/tree/main/Graph%20Theory)
-    - [ ] [Implementation](https://github.com/imsoumya18/ds_algo/blob/main/Graph%20Theory/1.%20graph.cpp)
-    - [ ] [BFS](https://github.com/imsoumya18/ds_algo/blob/1b56021b1ed4611c33ccc7a10557919cb44ce8fd/Graph%20Theory/1.%20graph.cpp#L8)
+    - [x] [Implementation](https://github.com/imsoumya18/ds_algo/blob/main/Graph%20Theory/1.%20graph.cpp)
+    - [x] [BFS](https://github.com/imsoumya18/ds_algo/blob/1b56021b1ed4611c33ccc7a10557919cb44ce8fd/Graph%20Theory/1.%20graph.cpp#L8)
+    - [x] [DFS](https://github.com/imsoumya18/ds_algo/blob/5388c680b6d49b2aa53e627b91ebb0c77bb2bbab/Graph%20Theory/1.%20graph.cpp#L45)
