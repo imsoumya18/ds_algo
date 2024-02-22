@@ -8,32 +8,23 @@ using namespace std;
 vector<int> bfs_traversal(int v, vector<int> adj[])
 {
     vector<int> bfs;
-    vector<int> vis(v + 1, 0);
-
-    for (int i = 1; i <= v; i++)
-    {
-        if (!vis[i])
-        {
-            // bfs of the node
-            queue<int> q;
-            q.push(i);
-            vis[i] = 1;
-            while (!q.empty())
-            {
-                int node = q.front();
-                q.pop();
-                bfs.push_back(node);
-
-                for (auto j : adj[node])
-                    if (!vis[j])
-                    {
-                        q.push(j);
-                        vis[j] = 1;
-                    }
+    vector<int> vis(v, 0);
+    queue<int> q;
+    q.push(0);
+    vis[0] = 1;
+    
+    while(!q.empty()){
+        int node = q.front();
+        q.pop();
+        bfs.push_back(node);
+        
+        for(auto it: adj[node])
+            if(vis[it] == 0){
+                vis[it] = 1;
+                q.push(it);
             }
-        }
     }
-
+    
     return bfs;
 }
 
