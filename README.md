@@ -2,7 +2,7 @@
 Quick revision of Data Structures & Algorithms
 
 1. [Searching Algorithms](https://github.com/imsoumya18/ds_algo/tree/main/Searching%20Algorithms)
-    - [x] [Linear Search](https://github.com/imsoumya18/ds_algo/blob/main/Searching%20Algorithms/1.%20linear_search.cpp)
+    - [x] [Linear Search](Searching%20Algorithms/1_linear_search.cpp)
     - [x] [Binary Search](https://github.com/imsoumya18/ds_algo/blob/main/Searching%20Algorithms/2.%20binary_search.cpp)
 2. [Sorting Algorithms](https://github.com/imsoumya18/ds_algo/tree/main/Sorting%20Algorithms)
     - [x] [Selection Sort](https://github.com/imsoumya18/ds_algo/blob/main/Sorting%20Algorithms/1.%20Selection%20Sort.cpp)
