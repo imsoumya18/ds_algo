@@ -33,9 +33,19 @@ public:
         return ele;
     }
 
-    int top() { return q.front(); }
+    int top()
+    {
 
-    bool empty() { return q.empty(); }
+        if (q.empty())
+            return -1;
+
+        return q.front();
+    }
+
+    bool empty()
+    {
+        return q.empty();
+    }
 };
 
 int main()
