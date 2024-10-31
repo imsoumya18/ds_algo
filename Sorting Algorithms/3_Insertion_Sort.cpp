@@ -11,18 +11,18 @@ to its corect position in sorted array*/
 
 void insertion_sort(vector<int> &vct)
 {
-    for (int i = 1; i < nums.size(); i++)
+    for (int i = 1; i < vct.size(); i++)
     {
-        int temp = nums[i];
+        int temp = vct[i];
         int j = i - 1;
 
-        while (nums[j] > temp && j >= 0)
+        while (vct[j] > temp && j >= 0)
         {
-            nums[j + 1] = nums[j];
+            vct[j + 1] = vct[j];
             j--;
         }
 
-        nums[j + 1] = temp;
+        vct[j + 1] = temp;
     }
 }
 

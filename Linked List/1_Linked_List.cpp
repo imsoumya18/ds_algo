@@ -36,11 +36,11 @@ void insertAtEnd(node *&head, int val)
 }
 
 // insert node at head
-void insertAtHead(ListNode *&head, int val)
+void insertAtHead(node *&head, int val)
 {
     node *temp = head;
 
-    head = new ListNode(val);
+    head = new node(val);
     head->next = temp;
 }
 
