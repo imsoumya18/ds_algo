@@ -29,7 +29,7 @@ Quick revision of Data Structures & Algorithms
    - [x] [Level Order Traversal](https://github.com/imsoumya18/ds_algo/blob/main/Binary%20Tree/5.%20bin_tree_level_order_traversal.cpp)
    - [x] [Height & Diameter](https://github.com/imsoumya18/ds_algo/blob/main/Binary%20Tree/6.%20bin_tree_height_diameter.cpp)
 7. [Binary Search Tree](https://github.com/imsoumya18/ds_algo/tree/main/Binary%20Search%20Tree)
-   - [ ] [Implementation](https://github.com/imsoumya18/ds_algo/blob/main/Binary%20Search%20Tree/1.%20bst.cpp)
+   - [ ] [Implementation](Binary%20Search%20Tree/1_bst.cpp)
 8. [Heap](https://github.com/imsoumya18/ds_algo/tree/main/Heap)
    - [ ] [Max Heap](https://github.com/imsoumya18/ds_algo/blob/main/Heap/max_heap.cpp)
 9. [Graph Theory](https://github.com/imsoumya18/ds_algo/tree/main/Graph%20Theory)
