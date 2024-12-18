@@ -37,3 +37,5 @@ Quick revision of Data Structures & Algorithms
    - [x] [Implementation](Graph%20Theory/1_graph.cpp)
    - [x] [BFS](Graph%20Theory/1_graph.cpp#L8)
    - [x] [DFS](Graph%20Theory/1_graph.cpp#L45)
+10. [Trie](Trie)
+   - [x] [Implementation](Trie/1_trie_implementation.cpp)

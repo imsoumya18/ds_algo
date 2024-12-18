@@ -10,7 +10,7 @@ void insert(vector<int> &harr, int p)
 
     int n = harr.size() - 1;
 
-    while (n > 1)
+    while (n > 0)
     {
         if (harr[(n - 1) / 2] < harr[n])
         {
@@ -20,12 +20,6 @@ void insert(vector<int> &harr, int p)
         }
         else
             break;
-    }
-    if (harr[(n - 1) / 2] < harr[n])
-    {
-        swap(harr[(n - 1) / 2], harr[n]);
-
-        n = (n - 1) / 2;
     }
 }
 
@@ -39,7 +33,7 @@ void deletion(vector<int> &harr)
     while (i < harr.size())
     {
         int lc = i * 2 + 1, rc = i * 2 + 2;
-        int larger = harr[lc] > harr[rc] ? i * 2 + 1 : i * 2 + 2;
+        int larger = harr[lc] > harr[rc] ? lc : rc;
 
         if (harr[larger] > harr[i])
         {
@@ -52,42 +46,57 @@ void deletion(vector<int> &harr)
 }
 
 // heapify
-void heapify(vector<int> &harr, int i)
+void heapify(vector<int> &harr, int size, int i)
 {
     int largest = i;
-    int l = 2 * i, r = 2 * i + 1;
+    int lc = 2 * i + 1, rc = 2 * i + 2;
 
-    if (l <= harr.size() && harr[l] > harr[largest])
-        largest = l;
+    if (lc < size && harr[lc] > harr[largest])
+        largest = lc;
 
-    if (r <= harr.size() && harr[r] > harr[largest])
-        largest = r;
+    if (rc < size && harr[rc] > harr[largest])
+        largest = rc;
 
     if (largest != i)
     {
         swap(harr[i], harr[largest]);
-        heapify(harr, largest);
+        heapify(harr, size, largest);
     }
 }
 
 // build heap
 void buildHeap(vector<int> &harr)
 {
-    for (int i = harr.size() / 2; i > 0; i--)
-        heapify(harr, i);
+    for (int i = harr.size() / 2 - 1; i >= 0; i--)
+        heapify(harr, harr.size(), i);
+}
+
+// heap sort
+void heapSort(vector<int> &harr, int n)
+{
+    int size = n;
+
+    while (size > 1)
+    {
+        swap(harr[0], harr[size - 1]);
+        size--;
+
+        heapify(harr, size, 0);
+    }
 }
 
 int main()
 {
-#ifndef ONLINE_JUDGE
-    freopen("input.txt", "r", stdin);
-    freopen("output.txt", "w", stdout);
-#endif
-
     vector<int> harr{35, 30, 27, 20, 15, 12, 17, 10};
 
-    insert(harr, 28);
-    deletion(harr);
+    // insert(harr, 50);
+    // deletion(harr);
+
+    for (auto i : harr)
+        cout << i << " ";
+
+    heapSort(harr, harr.size());
+    cout << endl;
 
     for (auto i : harr)
         cout << i << " ";
