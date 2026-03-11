@@ -7,45 +7,23 @@ using namespace std;
 
 void merge(vector<int> &vct, int l, int mid, int r)
 {
-    vector<int> arr1, arr2;
+    vector<int> temp;
+    int left = l, right = mid + 1;
 
-    for (int i = l; i <= mid; i++)
-        arr1.push_back(vct[i]);
-
-    for (int i = mid + 1; i <= r; i++)
-        arr2.push_back(vct[i]);
-
-    int i = l, j = 0, k = 0;
-
-    while (j < arr1.size() && k < arr2.size())
-    {
-        if (arr1[j] < arr2[k])
-        {
-            vct[i] = arr1[j];
-            i++;
-            j++;
-        }
+    while (left <= mid && right <= r)
+        if (vct[left] <= vct[right])
+            temp.push_back(vct[left++]);
         else
-        {
-            vct[i] = arr2[k];
-            i++;
-            k++;
-        }
-    }
+            temp.push_back(vct[right++]);
 
-    while (j < arr1.size())
-    {
-        vct[i] = arr1[j];
-        i++;
-        j++;
-    }
+    while (left <= mid)
+        temp.push_back(vct[left++]);
 
-    while (k < arr2.size())
-    {
-        vct[i] = arr2[k];
-        i++;
-        k++;
-    }
+    while (right <= r)
+        temp.push_back(vct[right++]);
+
+    for (int i = l; i <= r; i++)
+        vct[i] = temp[i - l];
 }
 
 void merge_sort(vector<int> &vct, int l, int r)
