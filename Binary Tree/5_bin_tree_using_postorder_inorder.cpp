@@ -38,9 +38,6 @@ Node *buildTree(int postorder[], int inorder[], int start, int end)
     idx--;
     Node *node = new Node(curr);
 
-    if (start == end)
-        return node;
-
     int pos = search(inorder, start, end, curr);
     node->right = buildTree(postorder, inorder, pos + 1, end);
     node->left = buildTree(postorder, inorder, start, pos - 1);
