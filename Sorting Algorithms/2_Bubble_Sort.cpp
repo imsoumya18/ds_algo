@@ -19,6 +19,18 @@ void bubble_sort(vector<int> &vct)
                 swap(vct[j], vct[j + 1]);
 }
 
+void recursive_bubble_sort(vector<int> &vct, int n)
+{
+    if (n <= 1)
+        return;
+
+    for (int i = 0; i < n - 1; i++)
+        if (vct[i] > vct[i + 1])
+            swap(vct[i], vct[i + 1]);
+
+    recursive_bubble_sort(vct, n - 1);
+}
+
 int main()
 {
     vector<int> vct{12, 45, 23, 51, 19, 8};

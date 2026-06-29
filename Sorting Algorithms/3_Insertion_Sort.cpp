@@ -26,6 +26,25 @@ void insertion_sort(vector<int> &vct)
     }
 }
 
+void recursive_insertion_sort(vector<int> &vct, int n)
+{
+    if (n == 1)
+        return;
+
+    recursive_insertion_sort(vct, n - 1);
+
+    int tmp = vct[n - 1];
+    int i = n - 2;
+
+    while (i >= 0 && vct[i] > tmp)
+    {
+        vct[i + 1] = vct[i];
+        i--;
+    }
+
+    vct[i + 1] = tmp;
+}
+
 int main()
 {
     vector<int> vct{12, 45, 23, 51, 19, 8};
