@@ -37,5 +37,7 @@ Quick revision of Data Structures & Algorithms
    - [x] [Implementation](Graph%20Theory/1_graph.cpp)
    - [x] [BFS](Graph%20Theory/1_graph.cpp#L8)
    - [x] [DFS](Graph%20Theory/1_graph.cpp#L45)
+   - [x] [Cycle Detection in Undirected Graph (BFS)](Graph%20Theory/2_cycle_datection.cpp#L27)
+   - [x] [Cycle Detection in Undirected Graph (DFS)](Graph%20Theory/2_cycle_datection.cpp#L76)
 10. [Trie](Trie)
    - [x] [Implementation](Trie/1_trie_implementation.cpp)
