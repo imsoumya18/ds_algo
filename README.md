@@ -39,5 +39,7 @@ Quick revision of Data Structures & Algorithms
    - [x] [DFS](Graph%20Theory/1_graph.cpp#L45)
    - [x] [Cycle Detection in Undirected Graph (BFS)](Graph%20Theory/2_cycle_datection.cpp#L27)
    - [x] [Cycle Detection in Undirected Graph (DFS)](Graph%20Theory/2_cycle_datection.cpp#L76)
+   - [x] [Topological Sort using DFS](Graph%20Theory/3_topo_sort.cpp)
+   - [x] [Topological Sort using BFS (Kahn's Algorithm)](Graph%20Theory/4_kahns_algo.cpp)
 10. [Trie](Trie)
    - [x] [Implementation](Trie/1_trie_implementation.cpp)

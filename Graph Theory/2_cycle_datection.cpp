@@ -7,23 +7,6 @@
 #include <climits>
 using namespace std;
 
-void print(vector<int> vct)
-{
-    for (auto i : vct)
-        cout << i << " ";
-    cout << endl;
-}
-
-void print(vector<vector<int>> vct)
-{
-    for (auto i : vct)
-    {
-        for (auto j : i)
-            cout << j << " ";
-        cout << endl;
-    }
-}
-
 bool isCycle_bfs(int V, vector<vector<int>> &adj)
 {
     vector<int> vis(V, 0);
