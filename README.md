@@ -46,5 +46,6 @@ Quick revision of Data Structures & Algorithms
    - [x] [Dijkstra's Algorithm using Priority Queue](Graph%20Theory/5_dijkstra.cpp#L7)
    - [x] [Dijkstra's Algorithm using Set](Graph%20Theory/5_dijkstra.cpp#L49)
    - [x] [Minimum Spanning Tree: Prim's Algorithm](Graph%20Theory/6_MST_prims_algo.cpp)
+   - [x] [Disjoint Set](Graph%20Theory/7_disjoint_set.cpp)
 10. [Trie](Trie)
    - [x] [Implementation](Trie/1_trie_implementation.cpp)
