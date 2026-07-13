@@ -55,6 +55,51 @@ void inorder(struct Node *root)
     inorder(root->right);
 }
 
+// leftmost (smallest) node of a subtree, used to find the inorder successor
+Node *findMin(Node *root)
+{
+    while (root->left != NULL)
+        root = root->left;
+
+    return root;
+}
+
+// delete a node from BST
+Node *deleteBST(Node *root, int val)
+{
+    if (root == NULL)
+        return NULL;
+
+    if (val < root->data)
+        root->left = deleteBST(root->left, val);
+    else if (val > root->data)
+        root->right = deleteBST(root->right, val);
+    else
+    {
+        // node found: handle 0, 1 and 2 children cases
+        if (root->left == NULL)
+        {
+            Node *temp = root->right;
+            delete root;
+            return temp;
+        }
+
+        if (root->right == NULL)
+        {
+            Node *temp = root->left;
+            delete root;
+            return temp;
+        }
+
+        // two children: replace value with inorder successor, then delete the successor
+        Node *successor = findMin(root->right);
+        root->data = successor->data;
+        root->right = deleteBST(root->right, successor->data);
+    }
+
+    return root;
+}
+
 int main()
 {
     Node *root = NULL;
@@ -75,7 +120,43 @@ int main()
     */
 
     inorder(root);
+    cout << endl;
     // inorder of BST is always sorted
+
+    root = deleteBST(root, 2); // leaf node
+    /*
+            5
+           / \
+          1   7
+           \
+            3
+             \
+              4
+    */
+    inorder(root);
+    cout << endl;
+
+    root = deleteBST(root, 3); // node with a single child (4)
+    /*
+            5
+           / \
+          1   7
+           \
+            4
+    */
+    inorder(root);
+    cout << endl;
+
+    root = deleteBST(root, 5); // node with two children, replaced by inorder successor (7)
+    /*
+            7
+           /
+          1
+           \
+            4
+    */
+    inorder(root);
+    cout << endl;
 
     return 0;
 }

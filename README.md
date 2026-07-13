@@ -30,7 +30,7 @@ Quick revision of Data Structures & Algorithms
    - [x] [Level Order Traversal](Binary%20Tree/6_bin_tree_level_order_traversal.cpp)
    - [x] [Height & Diameter](Binary%20Tree/7_bin_tree_height_diameter.cpp)
 7. [Binary Search Tree](Binary%20Search%20Tree)
-   - [ ] [Implementation](Binary%20Search%20Tree/1_bst.cpp)
+   - [x] [Implementation](Binary%20Search%20Tree/1_bst.cpp)
 8. [Heap](Heap)
    - [x] [Max Heap](Heap/1_max_heap.cpp)
    - [x] [Min Heap](Heap/2_min_heap.cpp)
