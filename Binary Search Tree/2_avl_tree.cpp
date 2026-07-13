@@ -33,32 +33,62 @@ int getBalance(Node *node)
     return height(node->left) - height(node->right);
 }
 
-Node *rightRotate(Node *y)
+Node *rightRotate(Node *root)
 {
-    Node *x = y->left;
-    Node *T2 = x->right;
+    Node *newRoot = root->left;
+    Node *T2 = newRoot->right;
 
-    x->right = y;
-    y->left = T2;
+    newRoot->right = root;
+    root->left = T2;
 
-    y->height = max(height(y->left), height(y->right)) + 1;
-    x->height = max(height(x->left), height(x->right)) + 1;
+    root->height = max(height(root->left), height(root->right)) + 1;
+    newRoot->height = max(height(newRoot->left), height(newRoot->right)) + 1;
 
-    return x;
+    return newRoot;
 }
 
-Node *leftRotate(Node *x)
+Node *leftRotate(Node *root)
 {
-    Node *y = x->right;
-    Node *T2 = y->left;
+    Node *newRoot = root->right;
+    Node *T2 = newRoot->left;
 
-    y->left = x;
-    x->right = T2;
+    newRoot->left = root;
+    root->right = T2;
 
-    x->height = max(height(x->left), height(x->right)) + 1;
-    y->height = max(height(y->left), height(y->right)) + 1;
+    root->height = max(height(root->left), height(root->right)) + 1;
+    newRoot->height = max(height(newRoot->left), height(newRoot->right)) + 1;
 
-    return y;
+    return newRoot;
+}
+
+// fix the height and, if needed, rotate this node back into balance;
+// used by both insertAVL and deleteAVL after they change a subtree
+Node *rebalance(Node *root)
+{
+    root->height = 1 + max(height(root->left), height(root->right));
+
+    if (height(root->left) - height(root->right) > 1) // left heavy
+    {
+        if (getBalance(root->left) >= 0) // left left
+            return rightRotate(root);
+        else // left right
+        {
+            root->left = leftRotate(root->left);
+            return rightRotate(root);
+        }
+    }
+    else if (height(root->right) - height(root->left) > 1) // right heavy
+    {
+        if (getBalance(root->right) <= 0) // right right
+            return leftRotate(root);
+        else // right left
+        {
+            root->right = rightRotate(root->right);
+            return leftRotate(root);
+        }
+    }
+
+    return root;
 }
 
 // insert a node and rebalance on the way back up
@@ -74,33 +104,7 @@ Node *insertAVL(Node *root, int val)
     else
         return root; // no duplicates
 
-    root->height = 1 + max(height(root->left), height(root->right));
-
-    int balance = getBalance(root);
-
-    // left left
-    if (balance > 1 && val < root->left->data)
-        return rightRotate(root);
-
-    // right right
-    if (balance < -1 && val > root->right->data)
-        return leftRotate(root);
-
-    // left right
-    if (balance > 1 && val > root->left->data)
-    {
-        root->left = leftRotate(root->left);
-        return rightRotate(root);
-    }
-
-    // right left
-    if (balance < -1 && val < root->right->data)
-    {
-        root->right = rightRotate(root->right);
-        return leftRotate(root);
-    }
-
-    return root;
+    return rebalance(root);
 }
 
 // search (same as plain BST search, height doesn't affect lookup)
@@ -150,33 +154,7 @@ Node *deleteAVL(Node *root, int val)
         root->right = deleteAVL(root->right, successor->data);
     }
 
-    root->height = 1 + max(height(root->left), height(root->right));
-
-    int balance = getBalance(root);
-
-    // left left
-    if (balance > 1 && getBalance(root->left) >= 0)
-        return rightRotate(root);
-
-    // left right
-    if (balance > 1 && getBalance(root->left) < 0)
-    {
-        root->left = leftRotate(root->left);
-        return rightRotate(root);
-    }
-
-    // right right
-    if (balance < -1 && getBalance(root->right) <= 0)
-        return leftRotate(root);
-
-    // right left
-    if (balance < -1 && getBalance(root->right) > 0)
-    {
-        root->right = rightRotate(root->right);
-        return leftRotate(root);
-    }
-
-    return root;
+    return rebalance(root);
 }
 
 // inorder traversal (left-node-right)
