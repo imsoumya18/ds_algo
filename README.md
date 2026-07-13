@@ -50,6 +50,7 @@ g++ -std=c++17 "Sorting Algorithms/1_selection_sort.cpp" -o out && ./out
 ## 🌲 Binary Search Tree
 
 - [x] [Implementation (insert, search, delete, inorder)](Binary%20Search%20Tree/1_bst.cpp)
+- [x] [AVL Tree (self-balancing, with rotations)](Binary%20Search%20Tree/2_avl_tree.cpp)
 
 ## ⛰️ Heap
 

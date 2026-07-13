@@ -1,24 +1,6 @@
 // @author Soumya
 #include <iostream>
-#include <vector>
 using namespace std;
-
-void print(vector<int> vct)
-{
-    for (auto i : vct)
-        cout << i << " ";
-    cout << endl;
-}
-
-void print(vector<vector<int>> vct)
-{
-    for (auto i : vct)
-    {
-        for (auto j : i)
-            cout << j << " ";
-        cout << endl;
-    }
-}
 
 struct Node
 {
