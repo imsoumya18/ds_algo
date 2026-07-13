@@ -21,6 +21,13 @@ void floydWarshall(vector<vector<int>> &dist)
                     dist[i][j] = dist[i][via] + dist[via][j];
 
     for (int i = 0; i < n; i++)
+        if (dist[i][i] < 0)
+        {
+            cout << "Negative cycle exists" << endl;
+            return;
+        }
+
+    for (int i = 0; i < n; i++)
         for (int j = 0; j < n; j++)
             if (dist[i][j] == INT_MAX)
                 dist[i][j] = -1;
