@@ -46,6 +46,7 @@ g++ -std=c++17 "Sorting Algorithms/1_selection_sort.cpp" -o out && ./out
 - [x] [Binary Tree using Postorder & Inorder](Binary%20Tree/5_bin_tree_using_postorder_inorder.cpp)
 - [x] [Level Order Traversal](Binary%20Tree/6_bin_tree_level_order_traversal.cpp)
 - [x] [Height & Diameter](Binary%20Tree/7_bin_tree_height_diameter.cpp)
+- [x] [Segment Tree (range maximum query, point update, range update with lazy propagation)](Binary%20Tree/8_segment_tree.cpp)
 
 ## 🌲 Binary Search Tree
 

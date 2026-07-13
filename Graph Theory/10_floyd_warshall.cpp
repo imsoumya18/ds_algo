@@ -3,6 +3,16 @@
 #include <vector>
 using namespace std;
 
+void printMatrix(vector<vector<int>> &dist)
+{
+    for (auto &row : dist)
+    {
+        for (auto val : row)
+            cout << val << " ";
+        cout << endl;
+    }
+}
+
 void floydWarshall(vector<vector<int>> &dist)
 {
     int n = dist.size();
@@ -41,7 +51,13 @@ int main()
                              {-1, -1, 1, 0, 2},
                              {1, -1, -1, 4, 0}};
 
+    cout << "before:" << endl;
+    printMatrix(dist);
+
     floydWarshall(dist);
+
+    cout << "after:" << endl;
+    printMatrix(dist);
 
     return 0;
 }
