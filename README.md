@@ -49,4 +49,4 @@ Quick revision of Data Structures & Algorithms
    - [x] [Minimum Spanning Tree: Prim's Algorithm](Graph%20Theory/7_mst_prims_algo.cpp)
    - [x] [Disjoint Set](Graph%20Theory/8_disjoint_set.cpp)
 10. [Trie](Trie)
-   - [x] [Implementation](Trie/1_trie_implementation.cpp)
+    - [x] [Implementation](Trie/1_trie_implementation.cpp)
