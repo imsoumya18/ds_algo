@@ -72,6 +72,7 @@ g++ -std=c++17 "Sorting Algorithms/1_selection_sort.cpp" -o out && ./out
 - [x] [Dijkstra's Algorithm using Set](Graph%20Theory/6_dijkstra.cpp#L49)
 - [x] [Minimum Spanning Tree: Prim's Algorithm](Graph%20Theory/7_mst_prims_algo.cpp)
 - [x] [Disjoint Set](Graph%20Theory/8_disjoint_set.cpp)
+- [x] [Bellman-Ford Algorithm](Graph%20Theory/9_bellman_ford.cpp)
 
 ## 🔤 Trie
 

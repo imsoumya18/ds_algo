@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(grep -E \"1_max_heap$|1_infix_to_postfix$|3_postfix_to_infix$\")",
+      "Bash(cp \"/Users/soumya/VS Code Projects/ds_algo/Heap/1_max_heap.cpp\" heaptest2.cpp)",
+      "Bash(sed -i '' 's|// deletion\\(harr\\);|deletion\\(harr\\);|' heaptest2.cpp)",
+      "Bash(g++ -fsanitize=address -g heaptest2.cpp -o heaptest2)",
+      "Bash(./heaptest2)"
+    ]
+  }
+}
