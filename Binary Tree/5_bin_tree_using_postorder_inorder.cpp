@@ -60,6 +60,13 @@ int main()
 {
     int postorder[] = {4, 2, 5, 3, 1};
     int inorder[] = {4, 2, 1, 5, 3};
+    /* tree built from the arrays above:
+         1
+        / \
+       2   3
+      /   /
+     4   5
+    */
 
     Node *node = buildTree(postorder, inorder, 0, 4);
 

@@ -1,10 +1,7 @@
 // @author Soumya
 #include <iostream>
 #include <vector>
-#include <stack>
 #include <queue>
-#include <algorithm>
-#include <climits>
 using namespace std;
 
 vector<int> topo_sort(int V, vector<vector<int>> &adj)
@@ -43,6 +40,24 @@ vector<int> topo_sort(int V, vector<vector<int>> &adj)
 
 int main()
 {
+    /* sample input:
+       6 6
+       0 1
+       0 2
+       1 3
+       2 3
+       3 4
+       3 5
+
+       graph (a valid topo order: 0 1 2 3 4 5):
+             0
+            / \
+           1   2
+            \ /
+             3
+            / \
+           4   5
+    */
     int n, m, i;
     cin >> n >> m;
 

@@ -54,9 +54,20 @@ int main()
     st->push(1);
     st->push(2);
     st->push(3);
+    st->push(4);
+    st->push(5);
+    /* stack (top to bottom):
+         | 5 | <- top
+         | 4 |
+         | 3 |
+         | 2 |
+         | 1 |
+         -----
+    */
     cout << st->top() << endl;
     st->pop();
     cout << st->top() << endl;
+    st->pop();
     st->pop();
     st->pop();
     st->pop();

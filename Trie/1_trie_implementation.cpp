@@ -1,10 +1,6 @@
 // @author Soumya
 #include <iostream>
 #include <vector>
-#include <stack>
-#include <queue>
-#include <algorithm>
-#include <climits>
 using namespace std;
 
 void print(vector<int> vct)
@@ -117,9 +113,20 @@ int main()
     Trie *tr = new Trie();
 
     tr->insert("apple");
+    tr->insert("app");
+    tr->insert("bat");
+    tr->insert("ball");
+    /* resulting trie (* marks end of a word):
+       root
+        ├─ a ─ p ─ p* ─ l ─ e*     ("app", "apple")
+        └─ b ─ a ─┬─ t*             ("bat")
+                   └─ l ─ l*        ("ball")
+    */
 
     cout << tr->startsWith("app") << endl;
     cout << tr->search("apps") << endl;
+    cout << tr->search("bat") << endl;
+    cout << tr->startsWith("ba") << endl;
 
     return 0;
 }

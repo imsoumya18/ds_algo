@@ -1,10 +1,7 @@
 // @author Soumya
 #include <iostream>
 #include <vector>
-#include <stack>
 #include <queue>
-#include <algorithm>
-#include <climits>
 using namespace std;
 
 bool isCycle_bfs(int V, vector<vector<int>> &adj)
@@ -70,6 +67,24 @@ bool isCycle_dfs(int V, vector<vector<int>> &adj)
 
 int main()
 {
+    /* sample input (has a cycle: 0-1-2-3-0):
+       6 6
+       0 1
+       1 2
+       2 3
+       3 0
+       3 4
+       4 5
+
+       graph:
+         0 --- 1
+         |     |
+         3 --- 2
+         |
+         4
+         |
+         5
+    */
     int n, m, i;
     cin >> n >> m;
 

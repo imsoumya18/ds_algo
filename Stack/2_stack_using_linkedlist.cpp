@@ -68,6 +68,16 @@ int main()
     st.push(1);
     st.push(2);
     st.push(3);
+    st.push(4);
+    st.push(5);
+    /* stack (top to bottom):
+         | 5 | <- top
+         | 4 |
+         | 3 |
+         | 2 |
+         | 1 |
+         -----
+    */
 
     cout << st.peek() << endl;
     st.pop();
@@ -78,7 +88,13 @@ int main()
     cout << st.peek() << endl;
     st.pop();
 
+    cout << st.peek() << endl;
     st.pop();
+
+    cout << st.peek() << endl;
+    st.pop();
+
+    st.pop(); // underflow: prints "Stack is empty!!"
 
     cout << st.empty() << endl;
 

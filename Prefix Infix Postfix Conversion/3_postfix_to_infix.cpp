@@ -10,7 +10,7 @@ string postfix_to_infix(string postfix)
 
     for (auto it : postfix)
         if ((it >= 'a' && it <= 'z') || (it >= 'A' && it <= 'Z') || (it >= '0' && it <= '9'))
-            st.push("" + it);
+            st.push(string(1, it));
         else
         {
             string b = st.top();

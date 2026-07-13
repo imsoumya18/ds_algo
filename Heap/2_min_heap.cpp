@@ -3,7 +3,7 @@
 #include <vector>
 using namespace std;
 
-// max heap insertion
+// min heap insertion
 void insert(vector<int> &harr, int p)
 {
     harr.push_back(p);
@@ -12,7 +12,7 @@ void insert(vector<int> &harr, int p)
 
     while (n > 0)
     {
-        if (harr[(n - 1) / 2] < harr[n])
+        if (harr[(n - 1) / 2] > harr[n])
         {
             swap(harr[(n - 1) / 2], harr[n]);
 
@@ -23,7 +23,7 @@ void insert(vector<int> &harr, int p)
     }
 }
 
-// max heap deletion
+// min heap deletion
 void deletion(vector<int> &harr)
 {
     harr[0] = harr[harr.size() - 1];
@@ -34,38 +34,38 @@ void deletion(vector<int> &harr)
     while (true)
     {
         int lc = i * 2 + 1, rc = i * 2 + 2;
-        int largest = i;
+        int smallest = i;
 
-        if (lc < n && harr[lc] > harr[largest])
-            largest = lc;
+        if (lc < n && harr[lc] < harr[smallest])
+            smallest = lc;
 
-        if (rc < n && harr[rc] > harr[largest])
-            largest = rc;
+        if (rc < n && harr[rc] < harr[smallest])
+            smallest = rc;
 
-        if (largest == i)
+        if (smallest == i)
             return;
 
-        swap(harr[i], harr[largest]);
-        i = largest;
+        swap(harr[i], harr[smallest]);
+        i = smallest;
     }
 }
 
 // heapify
 void heapify(vector<int> &harr, int size, int i)
 {
-    int largest = i;
+    int smallest = i;
     int lc = 2 * i + 1, rc = 2 * i + 2;
 
-    if (lc < size && harr[lc] > harr[largest])
-        largest = lc;
+    if (lc < size && harr[lc] < harr[smallest])
+        smallest = lc;
 
-    if (rc < size && harr[rc] > harr[largest])
-        largest = rc;
+    if (rc < size && harr[rc] < harr[smallest])
+        smallest = rc;
 
-    if (largest != i)
+    if (smallest != i)
     {
-        swap(harr[i], harr[largest]);
-        heapify(harr, size, largest);
+        swap(harr[i], harr[smallest]);
+        heapify(harr, size, smallest);
     }
 }
 
@@ -76,7 +76,7 @@ void buildHeap(vector<int> &harr)
         heapify(harr, harr.size(), i);
 }
 
-// heap sort
+// heap sort (descending, since each extracted min lands at the end)
 void heapSort(vector<int> &harr, int n)
 {
     int size = n;
@@ -92,18 +92,18 @@ void heapSort(vector<int> &harr, int n)
 
 int main()
 {
-    vector<int> harr{35, 30, 27, 20, 15, 12, 17, 10};
+    vector<int> harr{10, 12, 15, 17, 20, 27, 30, 35};
     /* array as a complete binary tree:
-                    35
+                    10
                  /      \
-               30        27
+               12        15
               /  \       /  \
-            20   15    12   17
+            17   20    27   30
             /
-          10
+          35
     */
 
-    // insert(harr, 50);
+    // insert(harr, 5);
     // deletion(harr);
 
     for (auto i : harr)

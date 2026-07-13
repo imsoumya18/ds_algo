@@ -81,6 +81,10 @@ int main()
     ds.unionBySize(4, 5);
     ds.unionBySize(6, 7);
     ds.unionBySize(5, 6);
+    /* sets after the unions above:
+       {1, 2, 3}   {4, 5, 6, 7}
+       3 and 7 are in different sets so far
+    */
 
     // Check if 3 & 7 have same parent or not
     if (ds.findUltParent(3) == ds.findUltParent(7))
@@ -89,6 +93,9 @@ int main()
         cout << "Not same" << endl;
 
     ds.unionBySize(3, 7);
+    /* after unionBySize(3, 7), the two sets merge into one:
+       {1, 2, 3, 4, 5, 6, 7}
+    */
 
     // Check if 3 & 7 have same parent or not
     if (ds.findUltParent(3) == ds.findUltParent(7))

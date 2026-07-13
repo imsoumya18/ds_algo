@@ -45,8 +45,17 @@ int primsAlgo(int V, vector<vector<int>> &edges)
 
 int main()
 {
-    vector<vector<int>> edges{{0, 1, 5}, {1, 2, 3}, {0, 2, 1}};
-    int V = 3;
+    vector<vector<int>> edges{{0, 1, 4}, {0, 2, 1}, {1, 2, 2}, {1, 3, 1}, {2, 3, 5}, {3, 4, 3}};
+    int V = 5;
+    /* graph (edge weights shown):
+            4         1
+        0 ------ 1 ------ 3 ------ 4
+         \       |        /   3
+          \1     |2      /5
+           \      |     /
+            ----- 2 ----
+       MST picks edges 0-2(1), 1-3(1), 1-2(2), 3-4(3) => total weight 7
+    */
 
     cout << primsAlgo(V, edges) << endl;
 

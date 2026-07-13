@@ -93,8 +93,18 @@ vector<int> dijkstra_using_set(int V, vector<vector<int>> &edges, int src)
 
 int main()
 {
-    vector<vector<int>> edges{{0, 1, 1}, {1, 2, 3}, {0, 2, 6}};
-    int V = 3, src = 2;
+    vector<vector<int>> edges{{0, 1, 4}, {0, 2, 1}, {1, 2, 2}, {1, 3, 1}, {2, 3, 5}, {3, 4, 3}};
+    int V = 5, src = 0;
+    /* graph (edge weights shown):
+            4         1
+        0 ------ 1 ------ 3 ------ 4
+         \       |        /   3
+          \1     |2      /5
+           \      |     /
+            ----- 2 ----
+       src = 0
+       shortest dist from 0: [0, 3, 1, 4, 7]
+    */
 
     for (auto it : dijkstra_using_pq(V, edges, src))
         cout << it << " ";

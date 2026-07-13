@@ -64,6 +64,15 @@ int main()
     insertBST(root, 4);
     insertBST(root, 2);
     insertBST(root, 7);
+    /*
+            5
+           / \
+          1   7
+           \
+            3
+           / \
+          2   4
+    */
 
     inorder(root);
     // inorder of BST is always sorted

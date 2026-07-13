@@ -16,7 +16,7 @@ void insertion_sort(vector<int> &vct)
         int temp = vct[i];
         int j = i - 1;
 
-        while (vct[j] > temp && j >= 0)
+        while (j >= 0 && vct[j] > temp)
         {
             vct[j + 1] = vct[j];
             j--;

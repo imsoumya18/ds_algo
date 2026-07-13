@@ -82,6 +82,9 @@ int main()
     q.enqueue(3);
     q.enqueue(4);
     q.enqueue(5);
+    /* queue (front to back):
+       front -> [1][2][3][4][5] <- back
+    */
 
     cout << q.peek() << endl;
     q.dequeue();

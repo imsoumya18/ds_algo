@@ -63,6 +63,13 @@ int main()
 {
     int preorder[] = {1, 2, 4, 3, 5};
     int inorder[] = {4, 2, 1, 5, 3};
+    /* tree built from the arrays above:
+         1
+        / \
+       2   3
+      /   /
+     4   5
+    */
 
     Node *node = buildTree(preorder, inorder, 0, 4);
 

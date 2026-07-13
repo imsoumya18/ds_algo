@@ -65,6 +65,10 @@ int main()
     insertAtEnd(head, 3);
     insertAtEnd(head, 4);
     insertAtEnd(head, 5);
+    insertAtHead(head, 0);
+    /* resulting list:
+       0 -> 1 -> 2 -> 3 -> 4 -> 5 -> NULL
+    */
 
     display(head);
 
