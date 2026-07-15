@@ -23,6 +23,7 @@ bool dfs(int node, vector<vector<int>> &adj, vector<int> &vis, vector<int> &dfs_
     return false;
 }
 
+// Time: O(V + E) | Space: O(V) for vis[] + dfs_vis[] + recursion stack
 bool isCycle_dfs(int V, vector<vector<int>> &adj)
 {
     vector<int> vis(V, 0), dfs_vis(V, 0);
@@ -35,6 +36,7 @@ bool isCycle_dfs(int V, vector<vector<int>> &adj)
     return false;
 }
 
+// Time: O(V + E) | Space: O(V) for indegree[] + queue
 bool isCycle_bfs(int V, vector<vector<int>> &adj)
 {
     vector<int> indegree(V, 0);

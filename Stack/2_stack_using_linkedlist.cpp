@@ -15,6 +15,7 @@ public:
     }
 };
 
+// push, pop, peek, empty: Time O(1) each | Space: O(1) each (grows/shrinks with the list)
 class stack
 {
     node *head;

@@ -3,6 +3,7 @@
 #include <vector>
 using namespace std;
 
+// Time: O(E log V) | Space: O(V + E) for adj list + O(V) for vis[] + heap
 int primsAlgo(int V, vector<vector<int>> &edges)
 {
     // code here

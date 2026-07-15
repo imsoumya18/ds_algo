@@ -2,6 +2,7 @@
 #include <iostream>
 using namespace std;
 
+// Time: O(V * E) | Space: O(V) for dist[]
 vector<int> bellmanFord(int V, vector<vector<int>> &edges, int src)
 {
     vector<int> dist(V, 1e8);

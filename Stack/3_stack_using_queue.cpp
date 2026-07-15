@@ -3,6 +3,8 @@
 #include <queue>
 using namespace std;
 
+// push: Time O(n) (rotates all existing elements through the helper queue) | Space: O(1) extra
+// pop, top, empty: Time O(1) each | Space: O(1)
 class MyStack
 {
 public:

@@ -17,6 +17,7 @@ struct Node
 };
 
 // preoreder traversal (node-left-right)
+// Time: O(n) | Space: O(h) recursion stack (h = height, O(n) worst case for a skewed tree)
 void preorder(struct Node *root)
 {
     if (root == NULL)
@@ -28,6 +29,7 @@ void preorder(struct Node *root)
 };
 
 // inorder traversal (left-node-right)
+// Time: O(n) | Space: O(h) recursion stack
 void inorder(struct Node *root)
 {
     if (root == NULL)
@@ -39,6 +41,7 @@ void inorder(struct Node *root)
 }
 
 // postorder traversal (left-right-node)
+// Time: O(n) | Space: O(h) recursion stack
 void postorder(struct Node *root)
 {
     if (root == NULL)

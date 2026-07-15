@@ -4,6 +4,7 @@ using namespace std;
 
 #define n 100
 
+// push, pop, peek, empty: Time O(1) each | Space: O(1) each (O(n) fixed array allocated up front)
 class stack
 {
     int *arr;

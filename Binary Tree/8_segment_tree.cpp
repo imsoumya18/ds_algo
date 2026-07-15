@@ -6,6 +6,7 @@
 using namespace std;
 
 // build a segment tree for range maximum query
+// Time: O(n) | Space: O(n) for the tree array + O(log n) recursion stack
 void build(vector<int> &arr, vector<int> &tree, int node, int start, int end)
 {
     if (start == end)
@@ -22,6 +23,7 @@ void build(vector<int> &arr, vector<int> &tree, int node, int start, int end)
 }
 
 // point update: set arr[idx] = val
+// Time: O(log n) | Space: O(log n) recursion stack
 void update(vector<int> &arr, vector<int> &tree, int node, int start, int end, int idx, int val)
 {
     if (start == end)
@@ -42,6 +44,7 @@ void update(vector<int> &arr, vector<int> &tree, int node, int start, int end, i
 }
 
 // range maximum query over [l, r]
+// Time: O(log n) | Space: O(log n) recursion stack
 int query(vector<int> &tree, int node, int start, int end, int l, int r)
 {
     if (r < start || end < l)
@@ -60,6 +63,7 @@ int query(vector<int> &tree, int node, int start, int end, int l, int r)
 // apply this node's pending update to itself, and hand it down to its children
 // (without this, a range update would have to touch every leaf in the range,
 // costing O(n) instead of O(log n))
+// Time: O(1) | Space: O(1)
 void pushDown(vector<int> &tree, vector<int> &lazy, int node, int start, int end)
 {
     if (lazy[node] == 0)
@@ -77,6 +81,7 @@ void pushDown(vector<int> &tree, vector<int> &lazy, int node, int start, int end
 }
 
 // range update: add val to every element in arr[l..r]
+// Time: O(log n) | Space: O(log n) recursion stack
 void updateRange(vector<int> &tree, vector<int> &lazy, int node, int start, int end, int l, int r, int val)
 {
     pushDown(tree, lazy, node, start, end);
@@ -100,6 +105,7 @@ void updateRange(vector<int> &tree, vector<int> &lazy, int node, int start, int 
 }
 
 // range maximum query over [l, r], aware of not-yet-applied lazy updates
+// Time: O(log n) | Space: O(log n) recursion stack
 int queryRange(vector<int> &tree, vector<int> &lazy, int node, int start, int end, int l, int r)
 {
     pushDown(tree, lazy, node, start, end);

@@ -3,6 +3,10 @@
 #include <stack>
 using namespace std;
 
+// Time: O(n^2) worst case - each "(" + a + it + b + ")" allocates and copies a
+// new string, and these strings can grow to O(n) length, so the total copying
+// work is quadratic (same trap as building a string with += in a loop)
+// Space: O(n) for the stack of partial expressions
 string postfix_to_infix(string postfix)
 {
     string infix = "";

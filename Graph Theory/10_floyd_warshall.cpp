@@ -3,6 +3,7 @@
 #include <vector>
 using namespace std;
 
+// Time: O(V^2) | Space: O(1)
 void printMatrix(vector<vector<int>> &dist)
 {
     for (auto &row : dist)
@@ -13,6 +14,7 @@ void printMatrix(vector<vector<int>> &dist)
     }
 }
 
+// Time: O(V^3) | Space: O(1) extra (updates the given V x V matrix in place)
 void floydWarshall(vector<vector<int>> &dist)
 {
     int n = dist.size();

@@ -17,6 +17,7 @@ struct Node
 };
 
 // search function
+// Time: O(n) | Space: O(1)
 int search(int inorder[], int start, int end, int curr)
 {
     for (int i = start; i <= end; i++)
@@ -27,6 +28,8 @@ int search(int inorder[], int start, int end, int curr)
 }
 
 // build a tree using postorder & inorder
+// Time: O(n^2) worst case (linear search() called once per node; would be O(n)
+// with a value->index hashmap instead) | Space: O(n) tree + O(h) recursion stack
 Node *buildTree(int postorder[], int inorder[], int start, int end)
 {
     static int idx = 4;
@@ -46,6 +49,7 @@ Node *buildTree(int postorder[], int inorder[], int start, int end)
 }
 
 // print inorder for verification
+// Time: O(n) | Space: O(h) recursion stack
 void inorderPrint(Node *root)
 {
     if (root == NULL)

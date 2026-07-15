@@ -17,6 +17,7 @@ public:
 };
 
 // insert node at end
+// Time: O(n) (walks to the tail) | Space: O(1)
 void insertAtEnd(node *&head, int val)
 {
     node *n = new node(val);
@@ -36,6 +37,7 @@ void insertAtEnd(node *&head, int val)
 }
 
 // insert node at head
+// Time: O(1) | Space: O(1)
 void insertAtHead(node *&head, int val)
 {
     node *temp = head;
@@ -45,6 +47,7 @@ void insertAtHead(node *&head, int val)
 }
 
 // print elements of linked list
+// Time: O(n) | Space: O(1)
 void display(node *head)
 {
     node *temp = head;

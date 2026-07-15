@@ -8,6 +8,7 @@ using namespace std;
 /*Choose an element and place
 it in its correct position*/
 
+// Time: O(r - l) | Space: O(1)
 int partition(vector<int> &nums, int l, int r)
 {
     int pivot = nums[r];
@@ -24,6 +25,8 @@ int partition(vector<int> &nums, int l, int r)
     return i + 1;
 }
 
+// Time: O(n log n) average, O(n^2) worst (e.g. already-sorted input, since the
+// pivot is always the last element) | Space: O(log n) avg, O(n) worst recursion stack
 void quick_sort(vector<int> &nums, int l, int r)
 {
     if (l < r)

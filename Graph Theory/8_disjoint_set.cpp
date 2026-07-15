@@ -18,6 +18,8 @@ public:
             parent[i] = i;
     }
 
+    // Time: O(a(n)) amortized (inverse Ackermann, effectively O(1)) thanks to
+    // path compression | Space: O(a(n)) recursion stack, effectively O(1)
     int findUltParent(int node)
     {
         if (parent[node] == node)
@@ -26,6 +28,7 @@ public:
         return parent[node] = findUltParent(parent[node]);
     }
 
+    // Time: O(a(n)) amortized | Space: O(1) (excluding the findUltParent recursion)
     void unionByRank(int u, int v)
     {
         int ulp_u = findUltParent(u);
@@ -46,6 +49,7 @@ public:
         }
     }
 
+    // Time: O(a(n)) amortized | Space: O(1) (excluding the findUltParent recursion)
     void unionBySize(int u, int v)
     {
         int ulp_u = findUltParent(u);

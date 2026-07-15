@@ -44,6 +44,7 @@ public:
         root = new Node();
     }
 
+    // Time: O(L), L = word length | Space: O(L) worst case (new nodes for unseen characters)
     void insert(string word)
     {
         Node *node = root;
@@ -59,6 +60,7 @@ public:
         node->setEnd();
     }
 
+    // Time: O(L), L = word length | Space: O(1)
     bool search(string word)
     {
         Node *node = root;
@@ -74,6 +76,7 @@ public:
         return node->isEnd();
     }
 
+    // Time: O(L), L = prefix length | Space: O(1)
     bool startsWith(string prefix)
     {
         Node *node = root;

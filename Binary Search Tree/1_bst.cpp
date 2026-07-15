@@ -16,6 +16,8 @@ struct Node
 };
 
 // insert node in BST
+// Time: O(h) = O(log n) avg, O(n) worst (skewed tree, since a plain BST doesn't
+// self-balance - see the AVL tree for that) | Space: O(h) recursion stack
 Node *insertBST(Node *root, int val)
 {
     if (root == NULL)
@@ -30,6 +32,7 @@ Node *insertBST(Node *root, int val)
 }
 
 // search in BST
+// Time: O(h) = O(log n) avg, O(n) worst | Space: O(h) recursion stack
 Node *searchBST(Node *root, int k)
 {
     if (root == NULL)
@@ -45,6 +48,7 @@ Node *searchBST(Node *root, int k)
 }
 
 // inorder traversal (left-node-right)
+// Time: O(n) | Space: O(h) recursion stack
 void inorder(struct Node *root)
 {
     if (root == NULL)
@@ -56,6 +60,7 @@ void inorder(struct Node *root)
 }
 
 // leftmost (smallest) node of a subtree, used to find the inorder successor
+// Time: O(h) = O(log n) avg, O(n) worst | Space: O(1) (iterative)
 Node *findMin(Node *root)
 {
     while (root->left != NULL)
@@ -65,6 +70,7 @@ Node *findMin(Node *root)
 }
 
 // delete a node from BST
+// Time: O(h) = O(log n) avg, O(n) worst | Space: O(h) recursion stack
 Node *deleteBST(Node *root, int val)
 {
     if (root == NULL)

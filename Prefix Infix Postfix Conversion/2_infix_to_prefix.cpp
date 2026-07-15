@@ -4,6 +4,7 @@
 #include <algorithm>
 using namespace std;
 
+// Time: O(1) | Space: O(1)
 int priority(char c)
 {
     if (c == '^')
@@ -18,6 +19,7 @@ int priority(char c)
     return -1;
 }
 
+// Time: O(n) | Space: O(n) for the stack + output string
 string infix_to_prefix(string infix)
 {
     string prefix = "";

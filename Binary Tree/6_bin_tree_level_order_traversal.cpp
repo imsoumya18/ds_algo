@@ -18,6 +18,7 @@ struct Node
 };
 
 // level order traversal
+// Time: O(n) | Space: O(w) queue, where w = max width of the tree (O(n) worst case)
 void printLevelOrder(Node *root)
 {
     if (root == NULL)

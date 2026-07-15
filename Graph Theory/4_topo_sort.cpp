@@ -15,6 +15,7 @@ void dfs(int node, vector<vector<int>> &adj, stack<int> &st, vector<int> &vis)
     st.push(node);
 }
 
+// Time: O(V + E) | Space: O(V) for vis[] + stack + recursion stack
 vector<int> topo_sort(int V, vector<vector<int>> &adj)
 {
     vector<int> vis(V, 0);

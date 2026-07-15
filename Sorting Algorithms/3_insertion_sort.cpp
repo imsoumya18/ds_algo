@@ -9,6 +9,7 @@ using namespace std;
 /*insert an element from unsorted array
 to its corect position in sorted array*/
 
+// Time: O(n^2) worst/avg, O(n) best (already sorted) | Space: O(1)
 void insertion_sort(vector<int> &vct)
 {
     for (int i = 1; i < vct.size(); i++)
@@ -26,6 +27,7 @@ void insertion_sort(vector<int> &vct)
     }
 }
 
+// Time: O(n^2) worst/avg, O(n) best (already sorted) | Space: O(n) recursion stack
 void recursive_insertion_sort(vector<int> &vct, int n)
 {
     if (n == 1)

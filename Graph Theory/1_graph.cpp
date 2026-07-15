@@ -5,6 +5,7 @@
 using namespace std;
 
 // BFS Traversal
+// Time: O(V + E) | Space: O(V) for vis[] + queue
 vector<int> bfs_traversal(int v, vector<vector<int>> &adj)
 {
     vector<int> bfs;
@@ -42,6 +43,7 @@ void dfs(vector<int> &dfs_store, vector<int> &vis, vector<vector<int>> &adj, int
 }
 
 // DFS Traversal
+// Time: O(V + E) | Space: O(V) for vis[] + recursion stack
 vector<int> dfs_traversal(int v, vector<vector<int>> &adj)
 {
     // Code here

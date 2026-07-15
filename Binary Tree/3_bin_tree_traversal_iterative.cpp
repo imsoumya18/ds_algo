@@ -18,6 +18,7 @@ struct Node
 };
 
 // iterative preoreder traversal (node-left-right)
+// Time: O(n) | Space: O(h) stack (O(n) worst case for a skewed tree)
 void preorder(struct Node *root)
 {
     if (root == NULL)
@@ -42,6 +43,7 @@ void preorder(struct Node *root)
 }
 
 // iterative inorder traversal (left-node-right)
+// Time: O(n) | Space: O(h) stack
 void inorder(struct Node *root)
 {
     stack<Node *> st;
@@ -68,6 +70,7 @@ void inorder(struct Node *root)
 }
 
 // iterative postorder traversal (left-right-node)
+// Time: O(n) | Space: O(n) for the two stacks combined
 void postorder(struct Node *root)
 {
     stack<Node *> st1, st2;

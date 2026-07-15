@@ -17,6 +17,7 @@ struct Node
 };
 
 // height of a binary tree (no of nodes in the longest path)
+// Time: O(n) | Space: O(h) recursion stack
 int calcHeight(Node *root)
 {
     if (root == NULL)
@@ -29,6 +30,9 @@ int calcHeight(Node *root)
 }
 
 // diameter of a binary tree (no of nodes in the longest path between any 2 leaves)
+// Time: O(n^2) worst case (calcHeight() is re-run from every node; the standard
+// optimization computes height and diameter together in a single O(n) pass)
+// Space: O(h) recursion stack
 int calcDiameter(Node *root)
 {
     if (root == NULL)

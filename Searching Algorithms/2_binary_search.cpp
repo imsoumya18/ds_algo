@@ -4,6 +4,7 @@
 using namespace std;
 
 // binary search algorithm
+// Time: O(log n) | Space: O(1)
 int binarySearch(vector<int> vct, int key)
 {
     int lo = 0, hi = vct.size() - 1;

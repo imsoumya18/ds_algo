@@ -4,6 +4,7 @@
 #include <queue>
 using namespace std;
 
+// Time: O(V + E) | Space: O(V) for vis[] + queue
 bool isCycle_bfs(int V, vector<vector<int>> &adj)
 {
     vector<int> vis(V, 0);
@@ -53,6 +54,7 @@ bool dfs(int node, int parent, vector<vector<int>> &adj, vector<int> &vis)
     return false;
 }
 
+// Time: O(V + E) | Space: O(V) for vis[] + recursion stack
 bool isCycle_dfs(int V, vector<vector<int>> &adj)
 {
     vector<int> vis(V, 0);

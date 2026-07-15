@@ -9,6 +9,7 @@ using namespace std;
 /*Repeatedly swap two adjacent elements
 if they are in wrong order*/
 
+// Time: O(n^2) in all cases (no early-exit flag, so it doesn't stop early even if already sorted) | Space: O(1)
 void bubble_sort(vector<int> &vct)
 {
     int n = vct.size();
@@ -19,6 +20,7 @@ void bubble_sort(vector<int> &vct)
                 swap(vct[j], vct[j + 1]);
 }
 
+// Time: O(n^2) in all cases | Space: O(n) recursion stack
 void recursive_bubble_sort(vector<int> &vct, int n)
 {
     if (n <= 1)

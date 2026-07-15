@@ -3,6 +3,8 @@
 #include <stack>
 using namespace std;
 
+// push: Time O(n) (moves all elements through the helper stack twice) | Space: O(1) extra
+// pop, peek, empty: Time O(1) each | Space: O(1)
 class MyQueue
 {
 public:

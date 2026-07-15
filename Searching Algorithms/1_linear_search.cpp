@@ -4,6 +4,7 @@
 using namespace std;
 
 // linear search algorithm
+// Time: O(n) worst/avg, O(1) best | Space: O(1)
 int linear_search(vector<int> vct, int n)
 {
     for (int i = 0; i < vct.size(); i++)

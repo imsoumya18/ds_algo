@@ -17,6 +17,7 @@ struct Node
     }
 };
 
+// Time: O(1) | Space: O(1)
 int height(Node *node)
 {
     if (node == NULL)
@@ -25,6 +26,7 @@ int height(Node *node)
     return node->height;
 }
 
+// Time: O(1) | Space: O(1)
 int getBalance(Node *node)
 {
     if (node == NULL)
@@ -33,6 +35,7 @@ int getBalance(Node *node)
     return height(node->left) - height(node->right);
 }
 
+// Time: O(1) | Space: O(1)
 Node *rightRotate(Node *root)
 {
     Node *newRoot = root->left;
@@ -47,6 +50,7 @@ Node *rightRotate(Node *root)
     return newRoot;
 }
 
+// Time: O(1) | Space: O(1)
 Node *leftRotate(Node *root)
 {
     Node *newRoot = root->right;
@@ -63,6 +67,7 @@ Node *leftRotate(Node *root)
 
 // fix the height and, if needed, rotate this node back into balance;
 // used by both insertAVL and deleteAVL after they change a subtree
+// Time: O(1) | Space: O(1)
 Node *rebalance(Node *root)
 {
     root->height = 1 + max(height(root->left), height(root->right));
@@ -92,6 +97,7 @@ Node *rebalance(Node *root)
 }
 
 // insert a node and rebalance on the way back up
+// Time: O(log n) guaranteed (the tree stays balanced) | Space: O(log n) recursion stack
 Node *insertAVL(Node *root, int val)
 {
     if (root == NULL)
@@ -108,6 +114,7 @@ Node *insertAVL(Node *root, int val)
 }
 
 // search (same as plain BST search, height doesn't affect lookup)
+// Time: O(log n) guaranteed | Space: O(log n) recursion stack
 Node *searchAVL(Node *root, int k)
 {
     if (root == NULL || root->data == k)
@@ -120,6 +127,7 @@ Node *searchAVL(Node *root, int k)
 }
 
 // leftmost (smallest) node of a subtree, used to find the inorder successor
+// Time: O(log n) guaranteed | Space: O(1) (iterative)
 Node *findMin(Node *root)
 {
     while (root->left != NULL)
@@ -129,6 +137,7 @@ Node *findMin(Node *root)
 }
 
 // delete a node and rebalance on the way back up
+// Time: O(log n) guaranteed | Space: O(log n) recursion stack
 Node *deleteAVL(Node *root, int val)
 {
     if (root == NULL)
@@ -158,6 +167,7 @@ Node *deleteAVL(Node *root, int val)
 }
 
 // inorder traversal (left-node-right)
+// Time: O(n) | Space: O(log n) recursion stack
 void inorder(Node *root)
 {
     if (root == NULL)

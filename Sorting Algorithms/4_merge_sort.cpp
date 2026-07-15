@@ -5,6 +5,8 @@ using namespace std;
 
 // merge sort algorithm
 
+// merges two sorted halves vct[l..mid] and vct[mid+1..r]
+// Time: O(r - l) | Space: O(r - l) for the temp array
 void merge(vector<int> &vct, int l, int mid, int r)
 {
     vector<int> temp;
@@ -26,6 +28,7 @@ void merge(vector<int> &vct, int l, int mid, int r)
         vct[i] = temp[i - l];
 }
 
+// Time: O(n log n) in all cases | Space: O(n) auxiliary + O(log n) recursion stack
 void merge_sort(vector<int> &vct, int l, int r)
 {
     if (l < r)

@@ -4,6 +4,7 @@
 #include <queue>
 using namespace std;
 
+// Time: O(V + E) | Space: O(V) for indegree[] + queue
 vector<int> topo_sort(int V, vector<vector<int>> &adj)
 {
     vector<int> indegree(V, 0);

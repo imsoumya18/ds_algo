@@ -9,6 +9,7 @@ using namespace std;
 /*Find the minimum element in unsorted array and swap
 it with element at begining*/
 
+// Time: O(n^2) in all cases (comparisons don't depend on input order) | Space: O(1)
 void selection_sort(vector<int> &vct)
 {
     int n = vct.size();

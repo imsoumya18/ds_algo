@@ -4,6 +4,7 @@
 #include <set>
 using namespace std;
 
+// Time: O((V + E) log V) | Space: O(V + E) for adj list + O(V) for dist[] + heap
 vector<int> dijkstra_using_pq(int V, vector<vector<int>> &edges, int src)
 {
     // Code here
@@ -46,6 +47,7 @@ vector<int> dijkstra_using_pq(int V, vector<vector<int>> &edges, int src)
     return dist;
 }
 
+// Time: O((V + E) log V) | Space: O(V + E) for adj list + O(V) for dist[] + set
 vector<int> dijkstra_using_set(int V, vector<vector<int>> &edges, int src)
 {
     // Code here

@@ -4,6 +4,7 @@
 using namespace std;
 
 // min heap insertion
+// Time: O(log n) | Space: O(1)
 void insert(vector<int> &harr, int p)
 {
     harr.push_back(p);
@@ -24,6 +25,7 @@ void insert(vector<int> &harr, int p)
 }
 
 // min heap deletion
+// Time: O(log n) | Space: O(1)
 void deletion(vector<int> &harr)
 {
     harr[0] = harr[harr.size() - 1];
@@ -51,6 +53,7 @@ void deletion(vector<int> &harr)
 }
 
 // heapify
+// Time: O(log n) | Space: O(log n) recursion stack
 void heapify(vector<int> &harr, int size, int i)
 {
     int smallest = i;
@@ -70,6 +73,9 @@ void heapify(vector<int> &harr, int size, int i)
 }
 
 // build heap
+// Time: O(n) (not O(n log n) - most nodes are near the bottom where heapify
+// does very little work; the tighter amortized bound works out to O(n))
+// Space: O(log n) recursion stack
 void buildHeap(vector<int> &harr)
 {
     for (int i = harr.size() / 2 - 1; i >= 0; i--)
@@ -77,6 +83,7 @@ void buildHeap(vector<int> &harr)
 }
 
 // heap sort (descending, since each extracted min lands at the end)
+// Time: O(n log n) | Space: O(log n) recursion stack (in-place otherwise)
 void heapSort(vector<int> &harr, int n)
 {
     int size = n;
