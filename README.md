@@ -75,6 +75,7 @@ g++ -std=c++17 "Sorting Algorithms/1_selection_sort.cpp" -o out && ./out
 - [x] [Disjoint Set](Graph%20Theory/8_disjoint_set.cpp)
 - [x] [Bellman-Ford Algorithm](Graph%20Theory/9_bellman_ford.cpp)
 - [x] [Floyd Warshall Algorithm](Graph%20Theory/10_floyd_warshall.cpp)
+- [x] [Bipartite Graph Check (BFS & DFS)](Graph%20Theory/11_bipartite_check.cpp)
 
 ## 🔤 Trie
 
