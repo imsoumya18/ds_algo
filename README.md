@@ -35,6 +35,13 @@ TC = Time Complexity, SC = Space Complexity (both already commented in the code,
 | [Insert at head](Linked%20List/1_linked_list.cpp) | O(1) | O(1) |
 | [Display](Linked%20List/1_linked_list.cpp) | O(n) | O(1) |
 
+| Doubly Linked List Operation | TC | SC |
+|---|---|---|
+| [Insert at head](Linked%20List/2_doubly_linked_list.cpp) | O(1) | O(1) |
+| [Insert at end](Linked%20List/2_doubly_linked_list.cpp) | O(n) | O(1) |
+| [Delete by value](Linked%20List/2_doubly_linked_list.cpp) | O(n) | O(1) |
+| [Display / Display reverse](Linked%20List/2_doubly_linked_list.cpp) | O(n) | O(1) |
+
 ## 📥 Stack
 
 | Implementation | Push | Pop/Peek/Empty | SC |

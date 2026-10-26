@@ -1,0 +1,13 @@
+# macOS
+.DS_Store
+
+# compiled binaries / build artifacts
+*.o
+*.out
+*.exe
+*.dSYM/
+Prefix Infix Postfix Conversion/1_infix_to_postfix
+Prefix Infix Postfix Conversion/3_postfix_to_infix
+
+# local Claude Code config
+.claude/
