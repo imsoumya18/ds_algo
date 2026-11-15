@@ -96,6 +96,38 @@ void postorder(struct Node *root)
     }
 }
 
+// iterative postorder traversal using 1 stack (left-right-node)
+// Time: O(n) (each node is pushed once and peeked at most twice) | Space: O(h) stack
+void postorderOneStack(struct Node *root)
+{
+    stack<Node *> st;
+    Node *curr = root;
+    Node *lastVisited = NULL;
+
+    while (curr != NULL || !st.empty())
+    {
+        if (curr != NULL)
+        {
+            st.push(curr);
+            curr = curr->left;
+        }
+        else
+        {
+            Node *top = st.top();
+
+            // right subtree exists and is not yet visited -> go there first
+            if (top->right != NULL && top->right != lastVisited)
+                curr = top->right;
+            else
+            {
+                cout << top->data << " ";
+                lastVisited = top;
+                st.pop();
+            }
+        }
+    }
+}
+
 int main()
 {
     struct Node *root = new Node(1);
@@ -120,6 +152,9 @@ int main()
     cout << endl;
 
     postorder(root);
+    cout << endl;
+
+    postorderOneStack(root);
     cout << endl;
 
     return 0;

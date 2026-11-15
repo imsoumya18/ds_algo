@@ -64,7 +64,7 @@ TC = Time Complexity, SC = Space Complexity (both already commented in the code,
 |---|---|---|
 | [Implementation](Binary%20Tree/1_bin_tree.cpp) | — | — |
 | [Traversal, recursive (pre/in/post)](Binary%20Tree/2_bin_tree_traversal.cpp) | O(n) | O(h) recursion stack |
-| [Traversal, iterative (pre/in/post)](Binary%20Tree/3_bin_tree_traversal_iterative.cpp) | O(n) | O(h), O(n) for postorder (two stacks) |
+| [Traversal, iterative (pre/in/post)](Binary%20Tree/3_bin_tree_traversal_iterative.cpp) | O(n) | O(h); postorder is O(n) with two stacks, O(h) with one |
 | [Build from Preorder & Inorder](Binary%20Tree/4_bin_tree_using_preorder_inorder.cpp) | O(n²) worst (linear search per node) | O(n) |
 | [Build from Postorder & Inorder](Binary%20Tree/5_bin_tree_using_postorder_inorder.cpp) | O(n²) worst (linear search per node) | O(n) |
 | [Level Order Traversal](Binary%20Tree/6_bin_tree_level_order_traversal.cpp) | O(n) | O(w) — w = max width, O(n) worst |
