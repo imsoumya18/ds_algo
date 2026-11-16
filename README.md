@@ -155,3 +155,9 @@ flowchart TD
 | [Infix to Postfix](Prefix%20Infix%20Postfix%20Conversion/1_infix_to_postfix.cpp) | O(n) | O(n) |
 | [Infix to Prefix](Prefix%20Infix%20Postfix%20Conversion/2_infix_to_prefix.cpp) | O(n) | O(n) |
 | [Postfix to Infix](Prefix%20Infix%20Postfix%20Conversion/3_postfix_to_infix.cpp) | O(n²) worst (repeated string concatenation) | O(n) |
+
+## 🏗️ System Design
+
+| Case Study | Covers |
+|---|---|
+| [TinyURL — model interview](System%20Design/1_tinyurl.md) | Base62 + token-range IDs · DynamoDB TTL · Redis cache-aside + consistent hashing · 10× scaling · SLIs |
