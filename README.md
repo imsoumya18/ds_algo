@@ -161,3 +161,4 @@ flowchart TD
 | Case Study | Covers |
 |---|---|
 | [TinyURL — model interview](System%20Design/1_tinyurl.md) | Base62 + token-range IDs · DynamoDB TTL · Redis cache-aside + consistent hashing · 10× scaling · SLIs |
+| [Pastebin — model interview](System%20Design/2_pastebin.md) | Metadata/blob split (DynamoDB + S3) · key generation service · conditional-put uniqueness · CDN for immutable content · TTL expiry across stores · S3 prefix limits |
